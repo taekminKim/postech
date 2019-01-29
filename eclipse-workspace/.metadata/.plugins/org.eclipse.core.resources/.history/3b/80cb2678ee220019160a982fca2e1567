@@ -1,0 +1,22 @@
+import java.io.IOException;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class boj_7576 {
+	static int arr[][];
+	static boolean visit[][];
+	static int dx[] = {-1,0,1,0};
+	static int dy[] = {0,1,0,-1};
+	static int N, M;
+	static int max = 0;
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+		N = sc.nextInt();
+		M = sc.nextInt();
+		arr = new int[N][M];
+		visit = new boolean[N][M];
+		
+		
+		
+	}
+}

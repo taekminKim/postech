@@ -1,0 +1,21 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class boj_4892 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		while(true) {
+			int n0 = Integer.parseInt(br.readLine());
+			if(n0==0) {
+				break;
+			}else {
+				
+				
+				
+				
+			}
+		}
+	}
+}
