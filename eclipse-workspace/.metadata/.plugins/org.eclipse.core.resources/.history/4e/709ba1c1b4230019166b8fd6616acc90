@@ -1,0 +1,19 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class boj_2583 {
+	static int arr[][];
+	static boolean visit[][];
+	static int N, M, K;
+	static int dx[] = {0,1,0,-1};
+	static int dy[] = {1,0,-1,0};
+	static int cnt = 0;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		LinkedList<Integer> at = new LinkedList<Integer>();
+		N = sc.nextInt();
+		M = sc.nextInt();
+		K = sc.nextInt();
+		
+	}
+}

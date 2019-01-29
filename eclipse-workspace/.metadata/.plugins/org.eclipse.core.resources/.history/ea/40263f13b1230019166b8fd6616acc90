@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class boj_2583 {
+	static int arr[][];
+	static boolean visit[][];
+	static int N, M;
+	static int dx[] = {};
+	static int dy[] = {};
+	static cnt = 0;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+	}
+}

@@ -1,0 +1,52 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class boj_3055 {
+	static int arr[][];
+	static boolean visit[][];
+	static int dx[] = {0,1,0,-1};
+	static int dy[] = {1,0,-1,0};
+	static int N, M;
+	static int count = 0;
+	static int startX = 0;
+	static int startY = 0;
+	static int endX = 0;
+	static int endY = 0;
+	static Queue<Point> water;
+	public static void main(String[] args) throws IOException {
+		//0 : .   * : 1  ,    D: 3,   S : 2, X:4
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		N = Integer.parseInt(st.nextToken());
+		M = Integer.parseInt(st.nextToken());
+		
+		arr = new int[N][M];
+		visit = new boolean[N][M];
+		water = new LinkedList<Point>();
+		for(int i=0; i<N; i++) {
+			String temp = br.readLine();
+			for(int j=0; j<M; j++) {
+				if(temp.charAt(j)=='D') {
+					arr[i][j] = 3;
+				}else if(temp.charAt(j)=='S') {
+					arr[i][j] = 2;
+				}else if(temp.charAt(j)=='*') {
+					arr[i][j] = 1;
+					water.add(new Point(i, j));
+				}else if(temp.charAt(j)=='X') {
+					arr[i][j] = 4;
+				}
+			}
+		}
+	}
+	
+	
+	
+}

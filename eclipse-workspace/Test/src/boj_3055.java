@@ -1,0 +1,105 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class boj_3055 {
+	static int arr[][];
+	static boolean visit[][];
+	static int dx[] = {0,1,0,-1};
+	static int dy[] = {1,0,-1,0};
+	static int N, M;
+	static int count = 0;
+	static int startX = 0;
+	static int startY = 0;
+	static int endX = 0;
+	static int endY = 0;
+	static Queue<Dot> water;
+	static Queue<Dot> beber;
+	public static void main(String[] args) throws IOException {
+		//0 : .   * : 1  ,    D: 3,   S : 2, X:4
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		N = Integer.parseInt(st.nextToken());
+		M = Integer.parseInt(st.nextToken());
+		
+		arr = new int[N][M];
+		visit = new boolean[N][M];
+		water = new LinkedList<Dot>();
+		beber = new LinkedList<Dot>();
+		for(int i=0; i<N; i++) {
+			String temp = br.readLine();
+			for(int j=0; j<M; j++) {
+				if(temp.charAt(j)=='D') {
+					arr[i][j] = 3;
+				}else if(temp.charAt(j)=='S') {
+					arr[i][j] = 2;
+					beber.add(new Dot(i,j));
+				}else if(temp.charAt(j)=='*') {
+					arr[i][j] = 1;
+					water.add(new Dot(i, j));
+				}else if(temp.charAt(j)=='X') {
+					arr[i][j] = 4;
+				}
+			}
+		}
+		while(true) {
+			int wSize = water.size();
+			//물을 먼저 이동시킨다.
+			while(wSize-- > 0) {
+				Dot p = water.poll();
+				for(int i=0; i<4; i++) {
+					int nx = dx[i] + p.x;
+					int ny = dy[i] + p.y;
+					if(nx >=0 && ny >=0 && nx <N && ny <M) {
+						if(arr[nx][ny]==0 || arr[nx][ny]==2) {
+							arr[nx][ny] = 1;
+							water.add(new Dot(nx, ny));
+						}
+					}
+				}
+			}
+			
+			//비버 이동
+			int bSize = beber.size();
+			while(bSize-- > 0) {
+				Dot p2 = beber.poll();
+				for(int i=0; i<4; i++) {
+					int nx = dx[i] + p2.x;
+					int ny = dy[i] + p2.y;
+					if(nx >=0 && ny >=0 && nx < N && ny < M) {
+						if(arr[nx][ny]==3) {
+							System.out.println(++count);
+							System.exit(0);
+						}
+						if(arr[nx][ny]==0) {
+							arr[nx][ny] = 2;
+							beber.add(new Dot(nx, ny));
+						}
+					}
+				}
+			}
+			count++;
+			int rebSize = beber.size();
+			if(rebSize==0) {
+				System.out.println("KAKTUS");
+				break;
+			}
+		}
+	}
+}
+class Dot{
+	int x;
+	int y;
+	public Dot(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+	
+}
