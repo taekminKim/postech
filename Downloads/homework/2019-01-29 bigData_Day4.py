@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # In[1]:
@@ -276,17 +276,24 @@ print(reg_results.summary())
 sns.residplot(ds_repair_x, ds_repair_y)
 
 
-# In[36]:
+# In[37]:
 
 
 #정규화
-obs = ds_repair_x.values + ds_repair_y.values
-z = (obs- np.mean(obs))/np.std(obs)
+# obs = ds_repair_x.values
+# z = (obs- np.mean(obs))/np.std(obs)
+# reg_results.resid
 #정규확률도
-stats.probplot(z, dist="norm", plot = plt)
+stats.probplot(reg_results.resid, dist="norm", plot = plt)
 
 
 # In[35]:
+
+
+
+
+
+# In[ ]:
 
 
 
