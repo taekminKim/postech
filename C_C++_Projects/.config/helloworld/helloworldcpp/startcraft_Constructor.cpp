@@ -1,4 +1,4 @@
-#include <iosstream>
+#include <iostream>
 using namespace std;
 
 class Marine{
@@ -30,7 +30,7 @@ Marine::Marine(int x, int y){
     damage = 5;
     is_dead = false;
 }
-void Marine::move(inx, int y){
+void Marine::move(int x, int y){
     coord_x = x;
     coord_y = y;
 }
