@@ -14,7 +14,6 @@ import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
 from scipy import stats
-import matplotlib.pyplot as plt
 import statsmodels.api as sm
 from statsmodels.stats.proportion import proportions_ztest
 from sklearn import linear_model

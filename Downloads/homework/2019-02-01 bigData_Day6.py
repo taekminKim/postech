@@ -184,7 +184,7 @@ print("test data size : {}".format(ds_tel_test.shape))
 #train 데이터에 상수 추가
 ds_tel_train = sm.add_constant(ds_tel_train)
 ds_tel_train.head()
-#로지스틱 회귀모델 및 회귀계수 검토
+#회귀모델 및 회귀계수 검토
 
 
 # In[113]:
