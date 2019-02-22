@@ -1,28 +1,8 @@
 digraph Tree {
 node [shape=box, style="filled", color="black"] ;
-0 [label="worst perimeter <= 109.45\nsamples = 385\nvalue = [148, 237]\nclass = 1", fillcolor="#399de560"] ;
-1 [label="worst concave points <= 0.135\nsamples = 241\nvalue = [17, 224]\nclass = 1", fillcolor="#399de5ec"] ;
+0 [label="Unnamed: 0 <= 9013.5\nsamples = 6990\nvalue = [700, 6290]\nclass = 1", fillcolor="#399de5e3"] ;
+1 [label="samples = 6302\nvalue = [656, 5646]\nclass = 1", fillcolor="#399de5e1"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
-2 [label="mean texture <= 21.575\nsamples = 214\nvalue = [3, 211]\nclass = 1", fillcolor="#399de5fb"] ;
-1 -> 2 ;
-3 [label="samples = 179\nvalue = [0, 179]\nclass = 1", fillcolor="#399de5ff"] ;
-2 -> 3 ;
-4 [label="samples = 35\nvalue = [3, 32]\nclass = 1", fillcolor="#399de5e7"] ;
-2 -> 4 ;
-5 [label="worst texture <= 27.575\nsamples = 27\nvalue = [14, 13]\nclass = 0", fillcolor="#e5813912"] ;
-1 -> 5 ;
-6 [label="samples = 18\nvalue = [5, 13]\nclass = 1", fillcolor="#399de59d"] ;
-5 -> 6 ;
-7 [label="samples = 9\nvalue = [9, 0]\nclass = 0", fillcolor="#e58139ff"] ;
-5 -> 7 ;
-8 [label="worst concave points <= 0.145\nsamples = 144\nvalue = [131, 13]\nclass = 0", fillcolor="#e58139e6"] ;
-0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
-9 [label="worst texture <= 20.22\nsamples = 33\nvalue = [20, 13]\nclass = 0", fillcolor="#e5813959"] ;
-8 -> 9 ;
-10 [label="samples = 9\nvalue = [0, 9]\nclass = 1", fillcolor="#399de5ff"] ;
-9 -> 10 ;
-11 [label="samples = 24\nvalue = [20, 4]\nclass = 0", fillcolor="#e58139cc"] ;
-9 -> 11 ;
-12 [label="samples = 111\nvalue = [111, 0]\nclass = 0", fillcolor="#e58139ff"] ;
-8 -> 12 ;
+2 [label="samples = 688\nvalue = [44, 644]\nclass = 1", fillcolor="#399de5ee"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
 }
